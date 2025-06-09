@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Life World - Create Your Dream Life Story | Play Free Online</title>
+    <meta name="description" content="Experience My Life World, the ultimate life simulation game where you create stories, build relationships, and explore endless possibilities. Play free online now!">
+    <meta name="keywords" content="my life world, life simulation, virtual world, story creation, simulation game, online game, free game, virtual life, character customization">
+    <meta name="author" content="My Life World Game">
+    <meta property="og:title" content="My Life World - Create Your Dream Life Story">
+    <meta property="og:description" content="Build your perfect world, create amazing stories, and live out your dreams in My Life World. The ultimate life simulation experience!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://petsinheaven.space">
+    <meta property="og:site_name" content="My Life World">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Life World - Create Your Dream Life Story">
+    <meta name="twitter:description" content="Build your perfect world, create amazing stories, and live out your dreams in My Life World!">
+    <link rel="canonical" href="https://petsinheaven.space">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 25%, #fff0f5 50%, #f5f0ff 75%, #f0fff0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007AFF;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "🌟";
+            font-size: 28px;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(-10deg) scale(1.1); }
+            75% { transform: rotate(10deg) scale(1.1); }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007AFF;
+        }
+
+        .hero-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1) 0%, rgba(88, 86, 214, 0.1) 25%, rgba(255, 45, 85, 0.1) 50%, rgba(52, 199, 89, 0.1) 75%, rgba(255, 204, 0, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="20" opacity="0.05">🏠</text></svg>') repeat;
+            animation: float 25s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50px, -50px) rotate(0deg); }
+            100% { transform: translate(-50px, -50px) rotate(360deg); }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #007AFF, #5856D6, #FF2D55, #34C759);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #6e6e73;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .play-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 122, 255, 0.4);
+        }
+
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+        }
+
+        .game-iframe-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: rgba(0, 122, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .feature-description {
+            color: #6e6e73;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .game-description {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .game-description p {
+            font-size: 1.1rem;
+            color: #6e6e73;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .game-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #007AFF, #5856D6, #FF2D55, #34C759);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="15" opacity="0.1" fill="white">🎮</text></svg>') repeat;
+            pointer-events: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .activities-section {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.05), rgba(88, 86, 214, 0.05));
+            padding: 60px 0;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .activity-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #007AFF;
+            transition: transform 0.3s ease;
+        }
+
+        .activity-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .activity-title {
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .activity-description {
+            color: #6e6e73;
+            line-height: 1.6;
+        }
+
+        .character-showcase {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .character-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            transition: transform 0.3s ease;
+        }
+
+        .character-item:hover {
+            transform: scale(1.05);
+        }
+
+        .character-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .character-name {
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #f5f5f7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: #007AFF;
+        }
+
+        .copyright {
+            color: #a1a1a6;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-section {
+                padding: 60px 0;
+            }
+
+            .game-container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            .content-section {
+                padding: 40px 0;
+            }
+
+            .game-description, .character-showcase {
+                padding: 30px 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .activities-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .characters-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 30px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .game-container {
+                padding: 15px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .game-description, .character-showcase {
+                padding: 25px 15px;
+            }
+
+            .activity-item {
+                padding: 20px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus styles for accessibility */
+        a:focus, button:focus {
+            outline: 2px solid #007AFF;
+            outline-offset: 2px;
+        }
+
+        /* Fun floating elements */
+        .floating-element {
+            position: fixed;
+            font-size: 20px;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.3;
+            animation: element-float 20s linear infinite;
+        }
+
+        @keyframes element-float {
+            0% {
+                transform: translateX(-100px) translateY(100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateX(calc(100vw + 100px)) translateY(-100px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">My Life World</a>
+                <nav>
+                    <ul>
+                        <li><a href="#game">Play Now</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#characters">Characters</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>My Life World</h1>
+                <p class="tagline">Create your perfect life story and explore endless possibilities in your very own virtual world.</p>
+                <a href="#game" class="play-button">🌟 Start Your Journey</a>
+            </div>
+        </section>
+
+        <section id="game" class="content-section">
+            <div class="container">
+                <div class="game-container">
+                    <div class="game-iframe-wrapper">
+                        <iframe 
+                            src="https://www.miniplay.com/embed/toca-life-world"
+                            class="game-iframe"
+                            title="My Life World Game"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2 style="color: white; position: relative; z-index: 2;">Join the Life World Community</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">5M+</div>
+                        <div class="stat-label">Life Stories Created</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Unique Locations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Characters & Pets</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Creative Possibilities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="content-section">
+            <div class="container">
+                <h2>Amazing Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3 class="feature-title">Build Your Dream Home</h3>
+                        <p class="feature-description">Design and customize your perfect living space with thousands of furniture and decoration options.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="feature-title">Create Your Family</h3>
+                        <p class="feature-description">Build relationships, start a family, and create meaningful connections with diverse characters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎭</div>
+                        <h3 class="feature-title">Tell Your Story</h3>
+                        <p class="feature-description">Create unique narratives and life adventures with unlimited storytelling possibilities.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3 class="feature-title">Explore Vast Worlds</h3>
+                        <p class="feature-description">Discover multiple interconnected locations from bustling cities to peaceful countryside.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🐕</div>
+                        <h3 class="feature-title">Care for Pets</h3>
+                        <p class="feature-description">Adopt and care for adorable pets, from playful puppies to exotic creatures.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3 class="feature-title">Endless Customization</h3>
+                        <p class="feature-description">Personalize every aspect of your world with millions of customization combinations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="content-section">
+            <div class="container">
+                <div class="character-showcase">
+                    <h2>Meet Your Life World Characters</h2>
+                    <p style="text-align: center; color: #6e6e73; margin-bottom: 30px;">Create and customize unique characters to populate your virtual world with personality and charm.</p>
+                    <div class="characters-grid">
+                        <div class="character-item">
+                            <div class="character-emoji">👨‍💼</div>
+                            <div class="character-name">Professionals</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-emoji">👩‍🎓</div>
+                            <div class="character-name">Students</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-emoji">👶</div>
+                            <div class="character-name">Babies</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-emoji">👴</div>
+                            <div class="character-name">Elders</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-emoji">🐶</div>
+                            <div class="character-name">Dogs</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-emoji">🐱</div>
+                            <div class="character-name">Cats</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-emoji">🐹</div>
+                            <div class="character-name">Small Pets</div>
+                        </div>
+                        <div class="character-item">
+                            <div class="character-emoji">🦜</div>
+                            <div class="character-name">Birds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="game-description">
+                    <h2>About My Life World</h2>
+                    <p>My Life World is the ultimate digital playground where creativity meets storytelling in an expansive virtual universe. This innovative life simulation game empowers players to craft their ideal existence, from designing dream homes to building meaningful relationships and creating unforgettable adventures.</p>
+                    
+                    <p>Set in a beautifully crafted world filled with diverse locations, My Life World offers unprecedented freedom to explore, create, and customize every aspect of your virtual life. Whether you want to run a bustling business, start a loving family, or embark on exciting adventures, the possibilities are truly limitless.</p>
+                    
+                    <p>The game features an intuitive interface that makes it easy for players of all ages to dive in and start creating. With regular updates introducing new locations, characters, and customization options, My Life World continues to evolve and expand, ensuring that your creative journey never ends.</p>
+                    
+                    <p>What sets My Life World apart is its focus on authentic life experiences and emotional connections. Players can form deep relationships with characters, care for adorable pets, and create stories that reflect real-life experiences while exploring fantastical elements that spark imagination and creativity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="activities-section">
+            <div class="container">
+                <h2>Life Activities & Adventures</h2>
+                <div class="activities-grid">
+                    <div class="activity-item">
+                        <div class="activity-title">🏠 Home Design</div>
+                        <p class="activity-description">Decorate and furnish your perfect home with thousands of items, from cozy furniture to stunning decorations.</p>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-title">🍳 Cooking Adventures</div>
+                        <p class="activity-description">Prepare delicious meals in your kitchen and host dinner parties for friends and family.</p>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-title">🎓 Education & Learning</div>
+                        <p class="activity-description">Attend school, university, or teach others in various educational settings and scenarios.</p>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-title">💼 Career Building</div>
+                        <p class="activity-description">Pursue different careers and professions, from doctors and teachers to artists and entrepreneurs.</p>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-title">🎉 Social Events</div>
+                        <p class="activity-description">Organize parties, celebrations, and gatherings to strengthen relationships and create memories.</p>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-title">🌳 Outdoor Exploration</div>
+                        <p class="activity-description">Explore parks, beaches, forests, and other natural environments for outdoor adventures.</p>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-title">🛍️ Shopping Sprees</div>
+                        <p class="activity-description">Visit various shops and markets to find new clothes, accessories, and items for your characters.</p>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-title">🎪 Entertainment</div>
+                        <p class="activity-description">Enjoy movies, concerts, theme parks, and other entertainment venues with friends and family.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>How to Play My Life World</h2>
+                <div class="game-description">
+                    <p><strong>Getting Started:</strong> Begin by creating your first character and choosing your starting location. Customize their appearance, personality, and backstory to bring them to life in your virtual world.</p>
+                    
+                    <p><strong>Building Your World:</strong> Use the intuitive drag-and-drop interface to place furniture, decorations, and interactive objects throughout your spaces. Everything is customizable, from wall colors to floor patterns.</p>
+                    
+                    <p><strong>Creating Stories:</strong> Interact with objects and other characters to trigger different scenarios and storylines. Use your imagination to create unique narratives and adventures that reflect your creativity.</p>
+                    
+                    <p><strong>Expanding Your Experience:</strong> As you play, unlock new locations, characters, and items. Each new addition opens up fresh possibilities for storytelling and world-building, ensuring your adventure never gets old.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#game">Play Game</a>
+                    <a href="#features">Features</a>
+                    <a href="#characters">Characters</a>
+                    <a href="#activities">Activities</a>
+                    <a href="mailto:contact@petsinheaven.space">Contact</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                </div>
+                <p class="copyright">© 2025 My Life World. All rights reserved. | Free online life simulation game</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading state for iframe
+        const iframe = document.querySelector('.game-iframe');
+        const wrapper = document.querySelector('.game-iframe-wrapper');
+        
+        iframe.addEventListener('load', function() {
+            wrapper.style.background = 'transparent';
+        });
+
+        // Create floating elements for ambience
+        function createFloatingElement() {
+            const elements = ['🏠', '🌟', '❤️', '🎈', '🌈'];
+            const element = document.createElement('div');
+            element.className = 'floating-element';
+            element.textContent = elements[Math.floor(Math.random() * elements.length)];
+            element.style.left = '-50px';
+            element.style.top = Math.random() * window.innerHeight + 'px';
+            element.style.animationDelay = Math.random() * 5 + 's';
+            element.style.animationDuration = (15 + Math.random() * 10) + 's';
+            document.body.appendChild(element);
+
+            // Remove element after animation
+            setTimeout(() => {
+                if (element.parentNode) {
+                    element.parentNode.removeChild(element);
+                }
+            }, 30000);
+        }
+
+        // Create floating elements periodically
+        setInterval(createFloatingElement, 4000);
+
+        // Simple analytics tracking
+        function trackGamePlay() {
+            console.log('My Life World game started - track this event with your analytics');
+        }
+
+        // Track when users click play
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', trackGamePlay);
+        });
+
+        // Add hover effects for interactive elements
+        document.querySelectorAll('.feature-card, .activity-item, .character-item').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (this.classList.contains('feature-card')) {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (this.classList.contains('feature-card')) {
+                    this.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        });
+
+        // Lazy load game when user scrolls to or clicks on game section
+        let gameLoaded = false;
+        function loadGame() {
+            if (!gameLoaded) {
+                const iframe = document.querySelector('.game-iframe');
+                if (iframe && iframe.src) {
+                    gameLoaded = true;
+                    console.log('My Life World game loaded');
+                }
+            }
+        }
+
+        document.querySelector('#game').addEventListener('click', loadGame);
+        
+        // Intersection Observer for game section
+        const gameSection = document.querySelector('#game');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadGame();
+                }
+            });
+        });
+        observer.observe(gameSection);
+
+        // Add sparkle effects on character interactions
+        document.querySelectorAll('.character-item').forEach(character => {
+            character.addEventListener('click', function() {
+                const sparkle = document.createElement('div');
+                sparkle.style.position = 'absolute';
+                sparkle.style.left = '50%';
+                sparkle.style.top = '50%';
+                sparkle.style.transform = 'translate(-50%, -50%)';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.fontSize = '20px';
+                sparkle.textContent = '✨';
+                sparkle.style.zIndex = '1000';
+                sparkle.style.animation = 'sparkle 1s ease-out forwards';
+                this.style.position = 'relative';
+                this.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    if (sparkle.parentNode) {
+                        sparkle.parentNode.removeChild(sparkle);
+                    }
+                }, 1000);
+            });
+        });
+
+        // Add CSS for sparkle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkle {
+                0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); opacity: 1; }
+                100% { transform: translate(-50%, -150%) scale(1.5) rotate(180deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
